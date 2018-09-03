@@ -15,3 +15,10 @@ Right panel
     - Upleft corner : Day #
     - Event : Timeslot, event description, update
  
+## How it works?
+User uploads a spreadsheet with the following fields:
+- Date
+- TimeSlot
+- Event
+- Active (Only active = 1 will show up on calendar)
+- Comments (Will not show up on calendar)
