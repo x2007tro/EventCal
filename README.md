@@ -19,8 +19,8 @@ Right panel
 User can update the calendar with two methods:
 1. Direct editing an entry
 2. User uploads a spreadsheet with the following fields:
-  - Date
-  - TimeSlot
-  - Event
-  - Active (Only active = 1 will show up on calendar)
-  - Comments (Will not show up on calendar)
+    - Date
+    - TimeSlot
+    - Event
+    - Active (Only active = 1 will show up on calendar)
+    - Comments (Will not show up on calendar)
