@@ -17,8 +17,8 @@ Right panel
  
 ## How it works?
 User can update the calendar with two methods:
-1 Direct editing an entry
-2 User uploads a spreadsheet with the following fields:
+1. Direct editing an entry
+2. User uploads a spreadsheet with the following fields:
   - Date
   - TimeSlot
   - Event
