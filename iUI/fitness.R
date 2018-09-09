@@ -11,23 +11,23 @@ tp_fitness <- tabPanel(
     ##
     column(
       width = 12,
-      shypka.ddiv2(tags$h3(class = "block_title", "Select")),
+      shypka.ddiv(tags$h3(class = "block_title", "Select"), color = "rgba(105,105,105,1)"),  # dimgray
       
       fluidRow(
         column(
           width = 6,
-          selectInput("cal_year", label = "Year", choices = all_years, 
-                      selected = lubridate::year(Sys.Date()), multiple = FALSE)
+          tags$b(selectInput("cal_year", label = "Year", choices = all_years, 
+                      selected = lubridate::year(Sys.Date()), multiple = FALSE))
         ),
         column(
           width = 6,
-          selectInput("cal_month", label = "Month", choices = names(month_dict), 
-                      selected = months(Sys.Date()), multiple = FALSE)   
+          tags$b(selectInput("cal_month", label = "Month", choices = names(month_dict), 
+                      selected = months(Sys.Date()), multiple = FALSE))
         )
       ),
       
-      shypka.ddiv2(tags$h3(class = "block_title", "Calendar")),
-      shypka.ddiv1(
+      shypka.ddiv(tags$h3(class = "block_title", "Calendar"), color = "rgba(105,105,105,1)"),  # dimgray
+      shypka.ddiv(
         tags$div(
           id = "cal_container",
           
@@ -39,11 +39,12 @@ tp_fitness <- tabPanel(
               lapply(1:7, function(j){
                 tags$div(
                   class = "day_floater1",
-                  shypka.ddiv2(
+                  shypka.ddiv(
                     tags$h4(
                       class = "block_wkdy",
                       names(weekday_dict)[j]
-                    )
+                    ),
+                    color = "rgba(220, 220, 220, 1)"
                   )
                 )
               })

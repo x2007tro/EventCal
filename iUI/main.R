@@ -1,7 +1,7 @@
 ##
 # Source all ui files
 ##
-ui_files <- c("fitness")
+ui_files <- c("fitness", "fileupload")
 lapply(ui_files, function(f){
   source(paste0("./iUI/", f, ".R"), local = FALSE)
 })
@@ -34,13 +34,14 @@ mainUI <- fluidPage(theme = shinythemes::shinytheme("simplex"),
         tabPanel(
           "Fitness",
           tabsetPanel(
-            tp_fitness
+            tp_fitness,
+            tp_fileupload
           )
-        ),
-        
-        tabPanel(
-          "Study"
         )
+        
+        # tabPanel(
+        #   "Study"
+        # )
       )
       
     ),
@@ -49,7 +50,8 @@ mainUI <- fluidPage(theme = shinythemes::shinytheme("simplex"),
     # Development panel
     ##
     tabPanel(
-      "Development"
+      "Development",
+      tags$b(tags$h5("No ongoing development in process!"))
     )
     
   )

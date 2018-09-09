@@ -2,27 +2,18 @@
 # Shiny helper function
 ##
 require(shiny)
-shypka.ddiv1 <- function(
+shypka.ddiv <- function(
   ui_element, 
-  frame_cln = "block_outter_frame1", 
-  content_cln = "block_inner_frame1"){
+  color = "rgba(220, 220, 220, 0)",
+  frame_cln = "block_outter_frame", 
+  content_cln = "block_inner_frame"){
   
-  res <- tags$div(class = frame_cln, tags$div(class = content_cln,
+  res <- tags$div(
+    class = frame_cln,
+    style = paste0("background-color:", color),
+    tags$div(class = content_cln,
       ui_element
   ))
   
   return(res)
 }
-
-shypka.ddiv2 <- function(
-  ui_element, 
-  frame_cln = "block_outter_frame2", 
-  content_cln = "block_inner_frame2"){
-  
-  res <- tags$div(class = frame_cln, tags$div(class = content_cln,
-                                              ui_element
-  ))
-  
-  return(res)
-}
-

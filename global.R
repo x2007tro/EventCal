@@ -30,3 +30,18 @@ weekday_dict <- list(
   Friday = 6,
   Saturday = 7
 )
+
+status_colors <- list(
+  completed = "rgba(0,100,0,1)",  # darkgreen
+  missed = "rgba(220,20,60,1)",   # crimson
+  booked = "rgba(255,99,71,1)",   # tomato
+  unbooked = "rgba(0,139,139,1)"  # darkcyan
+)
+
+bc_colors <- list(
+  n1 = "rgba(173,255,47,1)",      # greenyellow
+  n0 = "rgba(176,224,230,1)"      # power blue
+)
+
+sche_path <- "./input/"
+sche_fb <- file_process(path = sche_path)
