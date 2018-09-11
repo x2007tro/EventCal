@@ -27,9 +27,9 @@ mainUI <- fluidPage(theme = shinythemes::shinytheme("simplex"),
       
       ##
       # Display calendars
-      navlistPanel(
-        "Event list",
-        widths = c(2, 10),
+      #navlistPanel(
+      #  "Event list",
+      #  widths = c(2, 10),
         
         tabPanel(
           "Fitness",
@@ -42,7 +42,7 @@ mainUI <- fluidPage(theme = shinythemes::shinytheme("simplex"),
         # tabPanel(
         #   "Study"
         # )
-      )
+      #)
       
     ),
     
