@@ -24,3 +24,12 @@ User can update the calendar with two methods:
     - Event
     - Active (Only active = 1 will show up on calendar)
     - Comments (Will not show up on calendar)
+
+## Required packages (for bash script to run)
+- require(readxl)
+- require(openxlsx)
+- require(dplyr)
+- require(lubridate)
+- require(magrittr)
+- require(shiny)
+- require(shinythemes)
