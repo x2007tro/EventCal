@@ -10,7 +10,7 @@ tp_fileupload <- tabPanel(
      
      shypka.ddiv(tags$h3(class = "block_title", "Upload and Download"), color = "rgba(105,105,105,1)"),
      tags$br(),
-     downloadButton(class = "btn-primary", "file_d", "Download Schedule Template"),
+     downloadButton(class = "btn-primary", "file_d", "Download Current Schedule"),
      tags$br(), tags$br(),
      fileInput("file_u", "Upload Schedule",
                multiple = FALSE,

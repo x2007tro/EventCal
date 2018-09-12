@@ -22,19 +22,27 @@ output$file_d <- downloadHandler(
   },
   
   content = function(file) {
-    tmp <- data.frame(
-      Date = Sys.Date(),
-      Timeslot = "7PM-8PM",
-      Status = "booked",
-      BillingCycle = 1,
-      Active = 0,
-      EntryDate = Sys.Date(),
-      Comments = "Billing cycle controls month tab color (1 = light green, 0 = light blue) | 
-      Active controls if the record will appear on the calendar (1 = yes, 0 = no) | 
-      EntryDate and Comments will NOT appear on the calendar, information items only",
-      stringsAsFactors = FALSE
-    )
-    #write.csv(tmp, file, row.names = FALSE)
-    openxlsx::write.xlsx(tmp, file, sheetName = "Schedule", col.names = TRUE, row.names = FALSE)
+    #
+    # Create own tmp file
+    # tmp <- data.frame(
+    #   Date = Sys.Date(),
+    #   Timeslot = "7PM-8PM",
+    #   Status = "booked",
+    #   BillingCycle = 1,
+    #   Active = 0,
+    #   EntryDate = Sys.Date(),
+    #   Comments = "Billing cycle controls month tab color (1 = light green, 0 = light blue) | 
+    #   Active controls if the record will appear on the calendar (1 = yes, 0 = no) | 
+    #   EntryDate and Comments will NOT appear on the calendar, information items only",
+    #   stringsAsFactors = FALSE
+    # )
+    # #write.csv(tmp, file, row.names = FALSE)
+    # openxlsx::write.xlsx(tmp, file, sheetName = "Schedule", col.names = TRUE, row.names = FALSE)
+    
+    ##
+    # Extract file from directory
+    ##
+    fp <- last_mod_file(sche_path)
+    file.copy(fp, file)
   }
 )

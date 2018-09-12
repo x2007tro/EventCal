@@ -1,11 +1,15 @@
 ##
 # Process file
-
-file_process <- function(path){
+last_mod_file <- function(path){
   files <- list.files(path=path, pattern="*.xlsx", full.names=TRUE, recursive=FALSE)
   files_info <- file.info(files)
   mr_file <- rownames(files_info)[which(files_info$mtime == max(files_info$mtime))]
   
+  return(mr_file)
+}
+
+file_process <- function(path){
+  mr_file <- last_mod_file(path)
   sss <- as.data.frame(readxl::read_excel(mr_file, sheet = "Schedule"))
   
   ##
